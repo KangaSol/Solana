@@ -104,8 +104,8 @@
             });
         }
 
-        // Create coins every 100ms from the top
-        setInterval(createCoin, 300);
+        // Create coins every 500ms (increased interval to reduce coin frequency)
+        setInterval(createCoin, 500);  // Adjust the interval to create fewer coins
 
         // Function to create coins at mouse position
         function createCoinAtMouse(event) {

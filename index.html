@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meme Coin</title>
+
+    <!-- Link to Google Fonts (MyNerve font) -->
+    <link href="https://fonts.googleapis.com/css2?family=Mynerve&display=swap" rel="stylesheet">
+    
     <style>
+        /* Basic Page Styles */
         body {
             display: flex;
             flex-direction: column;
@@ -16,49 +21,44 @@
             font-family: Arial, sans-serif;
             text-align: center;
         }
+
+        /* Logo Zoom Effect */
         .logo {
-            width: 200px; /* Initial size of the logo */
-            transition: transform 0.5s ease-in-out;
-            animation: zoom 0.1s infinite alternate;
+            width: 150px; /* Initial size of the logo */
+            transition: transform 0.5s ease-in-out;  /* Faster transition */
+            animation: zoom 1s infinite alternate;  /* Faster zoom animation */
         }
+
+        /* Zoom keyframes */
         @keyframes zoom {
             from {
-                transform: scale(0.5);
+                transform: scale(1);  /* Start with the logo at its original size */
             }
             to {
-                transform: scale(2); /* Slight zoom */
+                transform: scale(1.2); /* End with the logo scaled up by 20% */
             }
         }
-        ..link {
-    
+
+        /* Link Styles */
+        .link {
             margin-top: 20px;
             font-size: 18px;
             font-weight: bold;
             color: #007bff;
             text-decoration: none;
-            font-family: 'Mynerve', sans-serif;  /* Apply the MyNerve font */
+            font-family: 'Mynerve', sans-serif;  /* Use MyNerve font */
         }
+
         .link:hover {
             text-decoration: underline;
         }
     </style>
 </head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meme Coin</title>
-
-    <!-- Link to Google Fonts (MyNerve font) -->
-    <link href="https://fonts.googleapis.com/css2?family=Mynerve&display=swap" rel="stylesheet">
-    
-    <!-- Your external or inline CSS file -->
-    <link rel="stylesheet" href="styles.css">
-</head>
-
 <body>
-    <!-- Add the logo image -->
+    <!-- Add the logo image (replace with your logo file) -->
     <img src="logo.png" alt="Meme Coin Logo" class="logo">
-    
-    <!-- Add the link to pump.fun -->
+
+    <!-- Link to pump.fun -->
     <a href="https://pump.fun" target="_blank" class="link">Visit pump.fun</a>
 </body>
 </html>

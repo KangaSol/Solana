@@ -20,6 +20,8 @@
             background-color: #fe4e0a; /* Light background */
             font-family: Arial, sans-serif;
             text-align: center;
+            position: relative; /* Important for the positioning of the coins */
+            overflow: hidden; /* Hide coins outside of the screen */
         }
 
         /* Logo Zoom Effect */
@@ -52,6 +54,30 @@
         .link:hover {
             text-decoration: underline;
         }
+
+        /* Gold Coin Falling Animation */
+        .coin {
+            position: absolute;
+            top: -50px;
+            width: 30px; /* Size of the coin */
+            height: 30px; /* Size of the coin */
+            background-image: url('coin.png'); /* Path to the coin image */
+            background-size: contain;
+            background-repeat: no-repeat;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            0% {
+                top: -50px;
+                left: 0;
+                opacity: 1;
+            }
+            100% {
+                top: 100vh; /* Coin falls to the bottom */
+                opacity: 0; /* Coin fades out */
+            }
+        }
     </style>
 </head>
 <body>
@@ -60,6 +86,29 @@
 
     <!-- Link to pump.fun -->
     <a href="https://pump.fun" target="_blank" class="link">Buy $KANGA here -> pump.fun</a>
+
+    <!-- JavaScript to create the coin rain effect -->
+    <script>
+        // Function to create and animate coins
+        function createCoin() {
+            const coin = document.createElement('div');
+            coin.classList.add('coin');
+            
+            // Randomize the starting position of the coins
+            coin.style.left = Math.random() * window.innerWidth + 'px';
+            coin.style.animationDuration = (Math.random() * 2 + 3) + 's'; // Random speed for each coin
+
+            document.body.appendChild(coin);
+
+            // Remove the coin after it falls
+            coin.addEventListener('animationend', () => {
+                coin.remove();
+            });
+        }
+
+        // Create coins every 100ms
+        setInterval(createCoin, 100);
+    </script>
 </body>
 </html>
 

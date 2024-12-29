@@ -87,7 +87,7 @@
 
     <!-- JavaScript to create the coin rain effect -->
     <script>
-        // Function to create and animate coins falling randomly from top
+        // Function to create and animate coins
         function createCoin() {
             const coin = document.createElement('div');
             coin.classList.add('coin');
@@ -104,29 +104,8 @@
             });
         }
 
-        // Create coins every 500ms (increased interval to reduce coin frequency)
-        setInterval(createCoin, 700);  // Adjust the interval to create fewer coins
-
-        // Function to create coins at mouse position
-        function createCoinAtMouse(event) {
-            const coin = document.createElement('div');
-            coin.classList.add('coin');
-            
-            // Position the coin where the mouse is
-            coin.style.left = event.pageX - 15 + 'px'; // Adjust for the coin's center
-            coin.style.top = event.pageY - 15 + 'px';  // Adjust for the coin's center
-
-            coin.style.animationDuration = (Math.random() * 3 + 2) + 's'; // Random speed for each coin
-            document.body.appendChild(coin);
-
-            // Remove the coin after it falls
-            coin.addEventListener('animationend', () => {
-                coin.remove();
-            });
-        }
-
-        // Listen for mouse movement and create coins at mouse position
-        document.addEventListener('mousemove', createCoinAtMouse);
+        // Create coins every 100ms
+        setInterval(createCoin, 100);
     </script>
 </body>
 </html>

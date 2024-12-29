@@ -3,10 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Meme Coin</title>
+    <title>Meme Coin</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f8ff; /* Light background */
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .logo {
+            width: 150px; /* Initial size of the logo */
+            transition: transform 1s ease-in-out;
+            animation: zoom 2s infinite alternate;
+        }
+        @keyframes zoom {
+            from {
+                transform: scale(1);
+            }
+            to {
+                transform: scale(1.2); /* Slight zoom */
+            }
+        }
+        .link {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #007bff;
+            text-decoration: none;
+        }
+        .link:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to My Meme Coin!</h1>
-    <p>Here’s where the fun begins 🚀</p>
+    <!-- Add the logo image -->
+    <img src="logo.png" alt="Meme Coin Logo" class="logo">
+    
+    <!-- Add the link to pump.fun -->
+    <a href="https://pump.fun" target="_blank" class="link">Visit pump.fun</a>
 </body>
 </html>
+

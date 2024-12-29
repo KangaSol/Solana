@@ -48,6 +48,7 @@
             color: #ffffff;
             text-decoration: none;
             font-family: 'Knewave', sans-serif;  /* Use Knewave font */
+            font-weight: normal; /* Remove bold */
         }
 
         .link:hover {
@@ -93,9 +94,9 @@
             coin.classList.add('coin');
             
             // Randomize the starting position of the coins (left or right)
-            const startLeft = Math.random() * window.innerWidth + 'px'; // Random horizontal start
             const startSide = Math.random() < 0.5 ? 'left' : 'right'; // Randomize from left or right
-            
+
+            // Set position for the coin depending on the start side
             if (startSide === 'left') {
                 coin.style.left = `-${coin.offsetWidth}px`; // Start from the left side
             } else {
@@ -116,6 +117,5 @@
     </script>
 </body>
 </html>
-
 
 

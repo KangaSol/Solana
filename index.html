@@ -70,12 +70,11 @@
         @keyframes fall {
             0% {
                 top: -50px;
-                left: 0;
                 opacity: 1;
             }
             100% {
                 top: 100vh; /* Coin falls to the bottom */
-                opacity: 0; /* Coin fades out */
+                opacity: 1; /* No fading out */
             }
         }
     </style>
@@ -94,10 +93,17 @@
             const coin = document.createElement('div');
             coin.classList.add('coin');
             
-            // Randomize the starting position of the coins
-            coin.style.left = Math.random() * window.innerWidth + 'px';
-            coin.style.animationDuration = (Math.random() * 2 + 3) + 's'; // Random speed for each coin
+            // Randomize the starting position of the coins (left or right)
+            const startLeft = Math.random() * window.innerWidth + 'px'; // Random horizontal start
+            const startSide = Math.random() < 0.5 ? 'left' : 'right'; // Randomize from left or right
+            
+            if (startSide === 'left') {
+                coin.style.left = `-${coin.offsetWidth}px`; // Start from the left side
+            } else {
+                coin.style.left = `${window.innerWidth}px`; // Start from the right side
+            }
 
+            coin.style.animationDuration = (Math.random() * 3 + 4) + 's'; // Random speed for each coin
             document.body.appendChild(coin);
 
             // Remove the coin after it falls
@@ -111,5 +117,6 @@
     </script>
 </body>
 </html>
+
 
 

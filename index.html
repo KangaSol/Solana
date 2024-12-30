@@ -11,47 +11,68 @@
     <style>
         /* Basic Page Styles */
         body {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
             margin: 0;
             background-color: #fe4e0a; /* Light background */
-            font-family: Arial, sans-serif;
+            font-family: 'Knewave', sans-serif;
             text-align: center;
-            position: relative; /* Important for the positioning of the coins */
-            overflow: hidden; /* Hide coins outside of the screen */
+            overflow-x: hidden; /* Prevent horizontal scrolling */
         }
 
-        /* Logo Zoom Effect */
+        /* Fixed Header Section */
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #fe4e0a;
+            padding: 20px 0;
+            z-index: 1000;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
         .logo {
             width: 250px; /* Initial size of the logo */
-            transition: transform 0.4s ease-in-out;  /* Faster transition */
-            animation: zoom 0.8s infinite alternate;  /* Faster zoom animation */
+            transition: transform 0.4s ease-in-out;
+            animation: zoom 0.8s infinite alternate; /* Faster zoom animation */
         }
 
-        /* Zoom keyframes */
-        @keyframes zoom {
-            from {
-                transform: scale(1);  /* Start with the logo at its original size */
-            }
-            to {
-                transform: scale(1.2); /* End with the logo scaled up by 20% */
-            }
-        }
-
-        /* Link Styles */
         .link {
-            margin-top: 20px;
+            display: block;
+            margin-top: 10px;
             font-size: 24px;
             color: #ffffff;
             text-decoration: none;
-            font-family: 'Knewave', sans-serif;  /* Use Knewave font */
         }
 
         .link:hover {
             text-decoration: underline;
+        }
+
+        @keyframes zoom {
+            from {
+                transform: scale(1);
+            }
+            to {
+                transform: scale(1.2);
+            }
+        }
+
+        /* Content Section */
+        .content {
+            padding-top: 180px; /* Offset for the fixed header */
+        }
+
+        .content img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+
+        .content p {
+            font-size: 20px;
+            color: #ffffff;
+            margin: 20px auto;
+            max-width: 800px;
+            line-height: 1.6;
         }
 
         /* Gold Coin Falling Animation */
@@ -73,17 +94,29 @@
             }
             100% {
                 top: 100vh; /* Coin falls to the bottom */
-                opacity: 1; /* No fading out */
+                opacity: 1;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Add the logo image (replace with your logo file) -->
-    <img src="logo.png" alt="Meme Coin Logo" class="logo">
+    <!-- Fixed Header -->
+    <div class="header">
+        <img src="logo.png" alt="Kanga Coin Logo" class="logo">
+        <a href="https://pump.fun" target="_blank" class="link">Buy $KANGA here -> pump.fun</a>
+    </div>
 
-    <!-- Link to pump.fun -->
-    <a href="https://pump.fun" target="_blank" class="link">Buy $KANGA here -> pump.fun</a>
+    <!-- Scrollable Content -->
+    <div class="content">
+        <img src="promo-image.png" alt="Promo Image">
+        <p>
+            Welcome to the Kanga Coin project! This is a revolutionary meme coin designed to bring fun and value to the crypto community. 
+            Explore our platform and be part of the movement!
+        </p>
+        <p>
+            Whether you're a seasoned investor or just getting started, $KANGA has something for everyone. Join us today and ride the wave!
+        </p>
+    </div>
 
     <!-- JavaScript to create the coin rain effect -->
     <script>
@@ -104,9 +137,10 @@
             });
         }
 
-        // Create coins every 100ms
+        // Create coins every 390ms
         setInterval(createCoin, 390);
     </script>
 </body>
 </html>
+
 

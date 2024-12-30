@@ -54,6 +54,13 @@
             font-size: 24px;
             color: #ffffff;
             text-decoration: none;
+            display: flex;
+            align-items: center; /* Align the text and logo */
+        }
+
+        .link img {
+            width: 30px; /* Adjust the size of the pumpfun logo */
+            margin-right: 10px; /* Space between the logo and the text */
         }
 
         .link:hover {
@@ -126,8 +133,10 @@
         <!-- Logo -->
         <img src="logo.png" alt="Kanga Coin Logo" class="logo">
 
-        <!-- Link to pump.fun -->
-        <a href="https://pump.fun" target="_blank" class="link">Buy $KANGA here -> pump.fun</a>
+        <!-- Link to pump.fun with pumpfun logo -->
+        <a href="https://pump.fun" target="_blank" class="link">
+            <img src="pumpfun.png" alt="Pump.fun Logo"> Buy $KANGA here -> pump.fun
+        </a>
 
         <!-- Link to X -->
         <a href="https://x.com/KangaSolana" target="_blank" class="social-link">
@@ -171,3 +180,4 @@
     </script>
 </body>
 </html>
+

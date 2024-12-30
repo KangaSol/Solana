@@ -7,50 +7,54 @@
 
     <!-- Link to Google Fonts (Knewave font) -->
     <link href="https://fonts.googleapis.com/css2?family=Knewave&display=swap" rel="stylesheet">
-    
+
     <style>
         /* Basic Page Styles */
         body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             margin: 0;
-            background-color: #fe4e0a; /* Light background */
-            font-family: 'Knewave', sans-serif;
+            background-color: #fe4e0a;
+            font-family: Arial, sans-serif;
             text-align: center;
-            overflow-x: hidden; /* Prevent horizontal scrolling */
+            overflow-x: hidden; /* Hide horizontal scroll caused by coins */
         }
 
-        /* Hero Section (Logo and Link) */
-        .hero {
+        /* Fullscreen Logo Section */
+        .fullscreen-section {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh; /* Full screen height */
-            position: relative; /* For coins to appear properly */
-            background-color: #fe4e0a;
+            height: 100vh;
+            width: 100%;
+            position: relative;
         }
 
+        /* Logo Zoom Effect */
         .logo {
-            width: 250px; /* Initial size of the logo */
+            width: 300px; /* Larger logo */
             transition: transform 0.4s ease-in-out;
-            animation: zoom 0.8s infinite alternate;
+            animation: zoom 1s infinite alternate;
         }
 
-        /* Make the logo zoom bigger */
         @keyframes zoom {
             from {
                 transform: scale(1);
             }
             to {
-                transform: scale(1.5); /* Bigger zoom size */
+                transform: scale(1.4); /* Bigger zoom */
             }
         }
 
+        /* Link Styles */
         .link {
-            display: block;
-            margin-top: 50px; /* Move the link further down */
+            margin-top: 50px; /* Space below the logo */
             font-size: 24px;
             color: #ffffff;
             text-decoration: none;
+            font-family: 'Knewave', sans-serif;
         }
 
         .link:hover {
@@ -63,11 +67,12 @@
             flex-direction: row;
             align-items: center;
             justify-content: center;
-            padding: 50px;
+            padding: 20px;
+            margin-top: -150px; /* Pulls content higher */
         }
 
         .content img {
-            max-width: 200px; /* Smaller size for the image */
+            max-width: 200px; /* Smaller image */
             margin-right: 20px;
         }
 
@@ -82,10 +87,10 @@
         /* Gold Coin Falling Animation */
         .coin {
             position: absolute;
-            top: 0; /* Start at the very top of the page */
-            width: 30px; /* Size of the coin */
-            height: 30px; /* Size of the coin */
-            background-image: url('coin.png'); /* Path to the coin image */
+            top: -50px;
+            width: 30px;
+            height: 30px;
+            background-image: url('coin.png');
             background-size: contain;
             background-repeat: no-repeat;
             animation: fall linear infinite;
@@ -93,42 +98,41 @@
 
         @keyframes fall {
             0% {
-                top: 0; /* Coin starts from the very top */
-                opacity: 1;
+                top: -50px;
             }
             100% {
-                top: 100vh; /* Coin falls to the bottom */
-                opacity: 1;
+                top: 100vh;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Hero Section -->
-    <div class="hero">
+    <!-- Fullscreen Section -->
+    <div class="fullscreen-section">
+        <!-- Logo -->
         <img src="logo.png" alt="Kanga Coin Logo" class="logo">
+
+        <!-- Link -->
         <a href="https://pump.fun" target="_blank" class="link">Buy $KANGA here -> pump.fun</a>
     </div>
 
-    <!-- Scrollable Content Section -->
+    <!-- Content Section -->
     <div class="content">
         <img src="promo-image.png" alt="Promo Image">
         <p>
-            Welcome to the Kanga Coin project! This is a revolutionary meme coin designed to bring fun and value to the crypto community. 
-            Explore our platform and be part of the movement!
+            Kanga Coin is here to revolutionize the crypto world. Join the movement and grab your $KANGA today. The future is golden!
         </p>
     </div>
 
-    <!-- JavaScript to create the coin rain effect -->
+    <!-- JavaScript for Coin Rain -->
     <script>
         // Function to create and animate coins
         function createCoin() {
             const coin = document.createElement('div');
             coin.classList.add('coin');
-            
-            // Randomize the starting position of the coins across the entire width of the screen
-            coin.style.left = Math.random() * window.innerWidth + 'px'; // Random horizontal position across the top
 
+            // Randomize the starting position of the coins across the entire width of the screen
+            coin.style.left = Math.random() * window.innerWidth + 'px'; 
             coin.style.animationDuration = (Math.random() * 3 + 4) + 's'; // Random speed for each coin
             document.body.appendChild(coin);
 
@@ -138,8 +142,8 @@
             });
         }
 
-        // Create coins every 390ms
-        setInterval(createCoin, 390);
+        // Create coins every 100ms
+        setInterval(createCoin, 300);
     </script>
 </body>
 </html>

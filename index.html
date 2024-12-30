@@ -13,7 +13,7 @@
         body {
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start; /* Align items at the top */
             align-items: center;
             height: 100vh;
             margin: 0;
@@ -22,7 +22,7 @@
             text-align: center;
             position: relative;
             overflow: hidden;
-            padding-top: 140px; /* Shift content down */
+            padding-top: 100px; /* Shift content down a bit */
         }
 
         /* Logo Zoom Effect */
@@ -31,6 +31,7 @@
             transition: transform 0.4s ease-in-out;
             animation: zoom 0.8s infinite alternate;
             position: absolute;
+            top: 20%; /* Position logo slightly above the center */
         }
 
         @keyframes zoom {
@@ -168,5 +169,6 @@
     </script>
 </body>
 </html>
+
 
 

@@ -32,12 +32,22 @@
         .logo {
             width: 250px; /* Initial size of the logo */
             transition: transform 0.4s ease-in-out;
-            animation: zoom 0.8s infinite alternate; /* Faster zoom animation */
+            animation: zoom 0.8s infinite alternate;
+        }
+
+        /* Make the logo zoom bigger */
+        @keyframes zoom {
+            from {
+                transform: scale(1);
+            }
+            to {
+                transform: scale(1.5); /* Bigger zoom size */
+            }
         }
 
         .link {
             display: block;
-            margin-top: 10px;
+            margin-top: 50px; /* Move the link further down */
             font-size: 24px;
             color: #ffffff;
             text-decoration: none;
@@ -45,15 +55,6 @@
 
         .link:hover {
             text-decoration: underline;
-        }
-
-        @keyframes zoom {
-            from {
-                transform: scale(1);
-            }
-            to {
-                transform: scale(1.2);
-            }
         }
 
         /* Content Section */

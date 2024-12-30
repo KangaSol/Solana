@@ -13,15 +13,15 @@
         body {
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start; /* Align content at the top */
             align-items: center;
-            height: 100vh;
             margin: 0;
             background-color: #fb4f22; /* Background color */
             font-family: Arial, sans-serif;
             text-align: center;
             position: relative;
             overflow: hidden;
+            padding-top: 120px; /* Shift everything down except the logo */
         }
 
         /* Logo Zoom Effect */
@@ -29,8 +29,8 @@
             width: 250px;
             transition: transform 0.4s ease-in-out;
             animation: zoom 0.8s infinite alternate;
-            position: absolute; /* Keep logo at the top */
-            top: 50px; /* Adjust position of the logo */
+            position: absolute;
+            top: 50px;
         }
 
         @keyframes zoom {
@@ -92,10 +92,10 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-top: 120px; /* Space to make room for the logo and links */
             text-align: left;
             padding: 30px;
             width: 80%;
+            margin-top: 150px; /* Shift content down to avoid overlap with zooming logo */
         }
 
         .scroll-content img {
@@ -106,7 +106,9 @@
 
         .scroll-content div {
             max-width: 500px; /* Limit the width of the text */
-            font-family: 'Knewave', sans-serif; /* Ensure the same font is used here */
+            color: white; /* Text color set to white */
+            font-weight: normal; /* Ensure the text is not bold */
+            font-family: 'Knewave', sans-serif; /* Ensure the same font is used */
         }
     </style>
 </head>
@@ -163,6 +165,3 @@
     </script>
 </body>
 </html>
-
-
-

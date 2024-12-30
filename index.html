@@ -18,15 +18,15 @@
             overflow-x: hidden; /* Prevent horizontal scrolling */
         }
 
-        /* Fixed Header Section */
-        .header {
-            position: fixed;
-            top: 0;
-            width: 100%;
+        /* Hero Section (Logo and Link) */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full screen height */
+            position: relative; /* For coins to appear properly */
             background-color: #fe4e0a;
-            padding: 20px 0;
-            z-index: 1000;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
         }
 
         .logo {
@@ -58,27 +58,30 @@
 
         /* Content Section */
         .content {
-            padding-top: 180px; /* Offset for the fixed header */
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            padding: 50px;
         }
 
         .content img {
-            max-width: 100%;
-            height: auto;
-            margin-top: 20px;
+            max-width: 200px; /* Smaller size for the image */
+            margin-right: 20px;
         }
 
         .content p {
             font-size: 20px;
             color: #ffffff;
-            margin: 20px auto;
-            max-width: 800px;
+            margin: 0;
+            max-width: 600px;
             line-height: 1.6;
         }
 
         /* Gold Coin Falling Animation */
         .coin {
             position: absolute;
-            top: -50px;
+            top: 0; /* Start at the very top of the page */
             width: 30px; /* Size of the coin */
             height: 30px; /* Size of the coin */
             background-image: url('coin.png'); /* Path to the coin image */
@@ -89,7 +92,7 @@
 
         @keyframes fall {
             0% {
-                top: -50px;
+                top: 0; /* Coin starts from the very top */
                 opacity: 1;
             }
             100% {
@@ -100,21 +103,18 @@
     </style>
 </head>
 <body>
-    <!-- Fixed Header -->
-    <div class="header">
+    <!-- Hero Section -->
+    <div class="hero">
         <img src="logo.png" alt="Kanga Coin Logo" class="logo">
         <a href="https://pump.fun" target="_blank" class="link">Buy $KANGA here -> pump.fun</a>
     </div>
 
-    <!-- Scrollable Content -->
+    <!-- Scrollable Content Section -->
     <div class="content">
         <img src="promo-image.png" alt="Promo Image">
         <p>
             Welcome to the Kanga Coin project! This is a revolutionary meme coin designed to bring fun and value to the crypto community. 
             Explore our platform and be part of the movement!
-        </p>
-        <p>
-            Whether you're a seasoned investor or just getting started, $KANGA has something for everyone. Join us today and ride the wave!
         </p>
     </div>
 

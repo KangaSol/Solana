@@ -13,15 +13,16 @@
         body {
             display: flex;
             flex-direction: column;
-            justify-content: flex-start; /* Align content at the top */
+            justify-content: center;
             align-items: center;
+            height: 100vh;
             margin: 0;
             background-color: #fb4f22; /* Background color */
             font-family: Arial, sans-serif;
             text-align: center;
             position: relative;
             overflow: hidden;
-            padding-top: 140px; /* Shift everything down except the logo */
+            padding-top: 140px; /* Shift content down */
         }
 
         /* Logo Zoom Effect */
@@ -30,7 +31,6 @@
             transition: transform 0.4s ease-in-out;
             animation: zoom 0.8s infinite alternate;
             position: absolute;
-            top: 50px;
         }
 
         @keyframes zoom {
@@ -51,7 +51,7 @@
             font-family: 'Knewave', sans-serif;
             display: inline-flex;
             align-items: center;
-            margin-bottom: 15px; /* Space between links */
+            margin-bottom: 15px;
         }
 
         .link img {
@@ -95,7 +95,7 @@
             text-align: left;
             padding: 30px;
             width: 80%;
-            margin-top: 150px; /* Shift content down to avoid overlap with zooming logo */
+            margin-top: 150px; /* Shift content down */
         }
 
         .scroll-content img {

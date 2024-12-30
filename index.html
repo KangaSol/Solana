@@ -54,13 +54,6 @@
             font-size: 24px;
             color: #ffffff;
             text-decoration: none;
-            display: flex;
-            align-items: center; /* Align the text and logo */
-        }
-
-        .link img {
-            width: 30px; /* Adjust the size of the pumpfun logo */
-            margin-right: 10px; /* Space between the logo and the text */
         }
 
         .link:hover {
@@ -74,7 +67,7 @@
             align-items: center;
             justify-content: center;
             padding: 20px;
-            margin-top: -180px; /* Adjusted to shift content up slightly */
+            margin-top: -150px; /* Pulls content higher */
         }
 
         .content img {
@@ -133,10 +126,8 @@
         <!-- Logo -->
         <img src="logo.png" alt="Kanga Coin Logo" class="logo">
 
-        <!-- Link to pump.fun with pumpfun logo -->
-        <a href="https://pump.fun" target="_blank" class="link">
-            <img src="pumpfun.png" alt="Pump.fun Logo"> Buy $KANGA here
-        </a>
+        <!-- Link to pump.fun -->
+        <a href="https://pump.fun" target="_blank" class="link">Buy $KANGA here -> pump.fun</a>
 
         <!-- Link to X -->
         <a href="https://x.com/KangaSolana" target="_blank" class="social-link">
@@ -159,13 +150,18 @@
 
     <!-- JavaScript for Coin Rain -->
     <script>
+        // Set an initial coin creation interval and the rate at which it will slow down
+        let coinInterval = 100;  // Initial interval in milliseconds
+        let increaseRate = 10;   // Increase the interval after each coin creation
+        let maxInterval = 1000;  // Max interval between coin creations (in milliseconds)
+
         // Function to create and animate coins
         function createCoin() {
             const coin = document.createElement('div');
             coin.classList.add('coin');
 
             // Randomize the starting position of the coins across the entire width of the screen
-            coin.style.left = Math.random() * window.innerWidth + 'px'; 
+            coin.style.left = Math.random() * window.innerWidth + 'px';
             coin.style.animationDuration = (Math.random() * 3 + 4) + 's'; // Random speed for each coin
             document.body.appendChild(coin);
 
@@ -173,12 +169,16 @@
             coin.addEventListener('animationend', () => {
                 coin.remove();
             });
+
+            // Slow down the coin creation by increasing the interval
+            if (coinInterval < maxInterval) {
+                coinInterval += increaseRate;  // Gradually increase the interval
+            }
         }
 
-        // Create coins every 100ms
-        setInterval(createCoin, 300);
+        // Create coins at the initial interval, then slowly decrease the frequency
+        setInterval(createCoin, coinInterval);
     </script>
 </body>
 </html>
-
 

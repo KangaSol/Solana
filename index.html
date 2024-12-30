@@ -7,36 +7,28 @@
 
     <!-- Link to Google Fonts (Knewave font) -->
     <link href="https://fonts.googleapis.com/css2?family=Knewave&display=swap" rel="stylesheet">
-
+    
     <style>
         /* Basic Page Styles */
         body {
-            font-family: 'Knewave', sans-serif; /* Apply Knewave font globally */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 0;
-            background-color: #fb4f22; /* Updated background color */
-            text-align: center;
-            overflow-x: hidden; /* Hide horizontal scroll caused by coins */
-        }
-
-        /* Fullscreen Logo Section */
-        .fullscreen-section {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            width: 100%;
+            margin: 0;
+            background-color: #fb4f22; /* Background color */
+            font-family: Arial, sans-serif;
+            text-align: center;
             position: relative;
+            overflow: hidden;
         }
 
         /* Logo Zoom Effect */
         .logo {
-            width: 300px; /* Larger logo */
+            width: 250px;
             transition: transform 0.4s ease-in-out;
-            animation: zoom 1s infinite alternate;
+            animation: zoom 0.8s infinite alternate;
         }
 
         @keyframes zoom {
@@ -44,43 +36,30 @@
                 transform: scale(1);
             }
             to {
-                transform: scale(1.4); /* Bigger zoom */
+                transform: scale(1.2);
             }
         }
 
         /* Link Styles */
         .link {
-            margin-top: 50px; /* Shift the "Buy $KANGA here" link down */
+            margin-top: 20px;
             font-size: 24px;
             color: #ffffff;
             text-decoration: none;
+            font-family: 'Knewave', sans-serif;
+            display: flex; /* Use flexbox to align the text and image */
+            align-items: center;
+        }
+
+        /* Style for the image next to the link */
+        .link img {
+            width: 30px;  /* Set the size of the logo */
+            height: auto;
+            margin-left: 10px;  /* Space between the text and the logo */
         }
 
         .link:hover {
             text-decoration: underline;
-        }
-
-        /* Content Section */
-        .content {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-            margin-top: -150px; /* Pulls content higher */
-        }
-
-        .content img {
-            max-width: 400px; /* Increased image size */
-            margin-right: 20px;
-        }
-
-        .content p {
-            font-size: 20px;
-            color: #ffffff;
-            margin: 0;
-            max-width: 600px;
-            line-height: 1.6;
         }
 
         /* Gold Coin Falling Animation */
@@ -98,65 +77,35 @@
         @keyframes fall {
             0% {
                 top: -50px;
+                opacity: 1;
             }
             100% {
                 top: 100vh;
+                opacity: 1;
             }
-        }
-
-        /* Style for social media links */
-        .social-link {
-            display: flex;
-            align-items: center;
-            margin-top: 20px; /* Shift social media links down */
-            font-size: 20px;
-            color: #ffffff;
-            text-decoration: none;
-        }
-
-        .social-link img {
-            width: 25px; /* Adjust size of the logos */
-            margin-right: 10px; /* Space between the logo and the text */
         }
     </style>
 </head>
 <body>
-    <!-- Fullscreen Section -->
-    <div class="fullscreen-section">
-        <!-- Logo -->
-        <img src="logo.png" alt="Kanga Coin Logo" class="logo">
+    <!-- Add the logo image (replace with your logo file) -->
+    <img src="logo.png" alt="Meme Coin Logo" class="logo">
 
-        <!-- Link to pump.fun -->
-        <a href="https://pump.fun" target="_blank" class="link">Buy $KANGA here -> pump.fun</a>
+    <!-- Link to pump.fun with the pump.fun logo next to it -->
+    <a href="https://pump.fun" target="_blank" class="link">
+        Buy $KANGA here -> pump.fun
+        <img src="pumpfun.png" alt="pump.fun logo">
+    </a>
 
-        <!-- Link to X -->
-        <a href="https://x.com/KangaSolana" target="_blank" class="social-link">
-            <img src="x-logo.png" alt="X Logo"> Follow us on X
-        </a>
-
-        <!-- Link to Telegram -->
-        <a href="https://t.co/tLTd6o6IQK" target="_blank" class="social-link">
-            <img src="telegram-logo.png" alt="Telegram Logo"> Join us on Telegram
-        </a>
-    </div>
-
-    <!-- Content Section -->
-    <div class="content">
-        <img src="promo-image.png" alt="Promo Image">
-        <p>
-            Kanga Coin is here to revolutionize the crypto world. Join the movement and grab your $KANGA today. The future is golden!
-        </p>
-    </div>
-
-    <!-- JavaScript for Coin Rain -->
+    <!-- JavaScript to create the coin rain effect -->
     <script>
         // Function to create and animate coins
         function createCoin() {
             const coin = document.createElement('div');
             coin.classList.add('coin');
-
+            
             // Randomize the starting position of the coins across the entire width of the screen
-            coin.style.left = Math.random() * window.innerWidth + 'px'; 
+            coin.style.left = Math.random() * window.innerWidth + 'px'; // Random horizontal position across the top
+
             coin.style.animationDuration = (Math.random() * 3 + 4) + 's'; // Random speed for each coin
             document.body.appendChild(coin);
 
@@ -167,10 +116,7 @@
         }
 
         // Create coins every 100ms
-        setInterval(createCoin, 300);
+        setInterval(createCoin, 390);
     </script>
 </body>
 </html>
-
-
-

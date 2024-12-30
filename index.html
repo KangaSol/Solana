@@ -49,10 +49,11 @@
             font-family: 'Knewave', sans-serif;
             display: inline-flex;
             align-items: center;
+            margin-bottom: 15px; /* Space between links */
         }
 
         .link img {
-            width: 30px;  /* Adjust the size of the pumpfun logo */
+            width: 30px;  /* Adjust the size of the logos */
             height: auto;
             margin-right: 10px;  /* Space between the logo and the text */
         }
@@ -83,6 +84,27 @@
                 opacity: 1;
             }
         }
+
+        /* Image and Text Section (scroll down content) */
+        .scroll-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+            text-align: left;
+            padding: 30px;
+            width: 80%;
+        }
+
+        .scroll-content img {
+            width: 200px; /* Size of the promo image */
+            height: auto;
+            margin-right: 20px;
+        }
+
+        .scroll-content div {
+            max-width: 500px; /* Limit the width of the text */
+        }
     </style>
 </head>
 <body>
@@ -94,6 +116,25 @@
         <img src="pumpfun.png" alt="pump.fun logo"> <!-- Pump.fun logo -->
         Buy $KANGA here -> pump.fun
     </a>
+
+    <!-- Add the X link and Telegram link with their respective logos -->
+    <a href="https://x.com/KangaSolana" target="_blank" class="link">
+        <img src="x-logo.png" alt="X logo"> <!-- X logo -->
+        KangaSolana on X
+    </a>
+    <a href="https://t.co/tLTd6o6IQK" target="_blank" class="link">
+        <img src="telegram-logo.png" alt="Telegram logo"> <!-- Telegram logo -->
+        Join us on Telegram
+    </a>
+
+    <!-- Scrollable content with image and text -->
+    <div class="scroll-content">
+        <img src="promo-image.png" alt="Promo Image">
+        <div>
+            <h2>Welcome to Kanga Coin!</h2>
+            <p>Get ready for a revolutionary meme coin experience. Buy $KANGA today and join our community. Let's make waves together!</p>
+        </div>
+    </div>
 
     <!-- JavaScript to create the coin rain effect -->
     <script>
@@ -119,4 +160,5 @@
     </script>
 </body>
 </html>
+
 

@@ -34,7 +34,7 @@
 
         /* Logo Zoom Effect */
         .logo {
-            width: 250px; /* Larger logo */
+            width: 300px; /* Larger logo */
             transition: transform 0.4s ease-in-out;
             animation: zoom 1s infinite alternate;
         }
@@ -50,7 +50,7 @@
 
         /* Link Styles */
         .link {
-            margin-top: 50px; /* Space below the logo */
+            margin-top: 20px; /* Space between links */
             font-size: 24px;
             color: #ffffff;
             text-decoration: none;
@@ -105,6 +105,21 @@
                 top: 100vh;
             }
         }
+
+        /* Style for social media links */
+        .social-link {
+            display: flex;
+            align-items: center;
+            margin-top: 10px; /* Space between social links */
+            font-size: 20px;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .social-link img {
+            width: 25px; /* Adjust size of the logos */
+            margin-right: 10px; /* Space between the logo and the text */
+        }
     </style>
 </head>
 <body>
@@ -113,15 +128,25 @@
         <!-- Logo -->
         <img src="logo.png" alt="Kanga Coin Logo" class="logo">
 
-        <!-- Link -->
+        <!-- Link to pump.fun -->
         <a href="https://pump.fun" target="_blank" class="link">Buy $KANGA here -> pump.fun</a>
+
+        <!-- Link to X -->
+        <a href="https://x.com/KangaSolana" target="_blank" class="social-link">
+            <img src="x-logo.png" alt="X Logo"> Follow us on X
+        </a>
+
+        <!-- Link to Telegram -->
+        <a href="https://t.co/tLTd6o6IQK" target="_blank" class="social-link">
+            <img src="telegram-logo.png" alt="Telegram Logo"> Join us on Telegram
+        </a>
     </div>
 
     <!-- Content Section -->
     <div class="content">
         <img src="promo-image.png" alt="Promo Image">
         <p>
-            Watch out PEPE, Kanga is here! Kanga is a wholesome meme coin looking to break into the Solana bluechip meme space. Please engage with socials to help grow the community and boost your bags!
+            Kanga Coin is here to revolutionize the crypto world. Join the movement and grab your $KANGA today. The future is golden!
         </p>
     </div>
 

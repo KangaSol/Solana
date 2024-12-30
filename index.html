@@ -47,15 +47,14 @@
             color: #ffffff;
             text-decoration: none;
             font-family: 'Knewave', sans-serif;
-            display: flex; /* Use flexbox to align the text and image */
+            display: inline-flex;
             align-items: center;
         }
 
-        /* Style for the image next to the link */
         .link img {
-            width: 30px;  /* Set the size of the logo */
+            width: 30px;  /* Adjust the size of the pumpfun logo */
             height: auto;
-            margin-left: 10px;  /* Space between the text and the logo */
+            margin-right: 10px;  /* Space between the logo and the text */
         }
 
         .link:hover {
@@ -92,8 +91,8 @@
 
     <!-- Link to pump.fun with the pump.fun logo next to it -->
     <a href="https://pump.fun" target="_blank" class="link">
-        Buy $KANGA here
-        <img src="pumpfun.png" alt="pump.fun logo">
+        <img src="pumpfun.png" alt="pump.fun logo"> <!-- Pump.fun logo -->
+        Buy $KANGA here -> pump.fun
     </a>
 
     <!-- JavaScript to create the coin rain effect -->
@@ -120,3 +119,4 @@
     </script>
 </body>
 </html>
+

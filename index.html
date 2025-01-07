@@ -151,6 +151,23 @@
       <a href="https://telegram.org" target="_blank">Telegram</a>
     </div>
   </div>
+
+  <!-- Audio Element for Ring Sound -->
+  <audio id="ring-sound" src="ring-sound.mp3" preload="auto"></audio>
+
+  <script>
+    // Automatically play the sound when the page loads
+    window.onload = function() {
+      const ringSound = document.getElementById('ring-sound');
+      ringSound.play();  // Start playing the sound on load
+
+      // Play sound on phone rotation
+      const iphone = document.querySelector('.iphone');
+      iphone.addEventListener('animationiteration', function() {
+        ringSound.play();  // Play the sound each time the animation repeats
+      });
+    };
+  </script>
 </body>
 </html>
 

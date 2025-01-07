@@ -31,14 +31,14 @@
       background-image: repeating-linear-gradient(
         -45deg,
         #666 0,
-        #666 20px,
-        #ccc 20px,
-        #ccc 40px
+        #666 40px,
+        #ccc 40px,
+        #ccc 80px
       );
       z-index: -2;
     }
 
-    /* "Pork Tuah" Text Over the Tape */
+    /* Adding "Pork Tuah" Text on the Tape */
     body::after {
       content: "Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah ";
       position: absolute;
@@ -46,13 +46,17 @@
       left: -50%;
       width: 200%;
       height: 200%;
-      font-size: 18px;
+      font-size: 24px;
       font-weight: bold;
       color: white;
+      letter-spacing: 2px;
       text-transform: uppercase;
       white-space: nowrap;
       z-index: -1;
       transform: rotate(-45deg);
+      background: transparent;
+      line-height: 80px;
+      text-shadow: 1px 1px 2px black;
     }
 
     /* Styling for the rotating logo */
@@ -79,9 +83,6 @@
       }
       50%, 100% {
         transform: rotate(0deg);
-      }
-      70% {
-        /* Pause the motion during this time for 1 second */
       }
     }
 

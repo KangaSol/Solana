@@ -20,7 +20,7 @@
       background-color: #ccc; /* Light grey base color */
     }
 
-    /* Background Styling - Repeated Police Tape Effect */
+    /* Background Styling - Repeated "Pork Tuah" Text */
     body::before {
       content: "";
       position: absolute;
@@ -30,34 +30,40 @@
       height: 100%;
       background-image: repeating-linear-gradient(
         -45deg,
-        #666 0,
-        #666 40px,
-        #ccc 40px,
-        #ccc 80px
+        transparent 0,
+        transparent 20px,
+        white 20px,
+        white 40px
+      ), repeating-linear-gradient(
+        45deg,
+        transparent 0,
+        transparent 20px,
+        white 20px,
+        white 40px
       );
       z-index: -2;
+      pointer-events: none;
     }
 
     /* Adding "Pork Tuah" Text on the Tape */
     body::after {
-      content: "Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah ";
+      content: "Pork Tuah ";
       position: absolute;
       top: 50%;
       left: 50%;
       width: 100%;
-      font-size: 24px;
+      font-size: 120px;
       font-weight: bold;
       color: white;
-      letter-spacing: 2px;
+      letter-spacing: 10px;
       text-transform: uppercase;
       white-space: nowrap;
       z-index: -1;
       transform: rotate(-45deg);
       text-align: center;
       background: transparent;
-      line-height: 80px;
-      text-shadow: 1px 1px 2px black;
-      transform: rotate(-45deg);
+      line-height: 1.2;
+      text-shadow: 2px 2px 3px black;
       width: 100%;
       margin-left: -50%;
       margin-top: -50%;

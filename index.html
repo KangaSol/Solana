@@ -20,53 +20,68 @@
       background-color: #ccc; /* Light grey base color */
     }
 
-    /* Background Styling - Repeated "Pork Tuah" Text */
-    body::before {
-      content: "";
+    /* Sliding Background "Pork Tuah" Text */
+    .pork-tuah-background {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background-image: repeating-linear-gradient(
-        -45deg,
-        transparent 0,
-        transparent 20px,
-        white 20px,
-        white 40px
-      ), repeating-linear-gradient(
-        45deg,
-        transparent 0,
-        transparent 20px,
-        white 20px,
-        white 40px
-      );
+      background: transparent;
       z-index: -2;
       pointer-events: none;
+      overflow: hidden;
     }
 
-    /* Adding "Pork Tuah" Text on the Tape */
-    body::after {
-      content: "Pork Tuah ";
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 100%;
+    .pork-tuah-background span {
+      display: block;
+      white-space: nowrap;
       font-size: 120px;
       font-weight: bold;
       color: white;
       letter-spacing: 10px;
       text-transform: uppercase;
-      white-space: nowrap;
-      z-index: -1;
-      transform: rotate(-45deg);
-      text-align: center;
-      background: transparent;
-      line-height: 1.2;
       text-shadow: 2px 2px 3px black;
-      width: 100%;
-      margin-left: -50%;
-      margin-top: -50%;
+      line-height: 1.2;
+    }
+
+    /* Create alternate sliding effect for "Pork Tuah" */
+    @keyframes slideLeft {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    @keyframes slideRight {
+      0% {
+        transform: translateX(-100%);
+      }
+      100% {
+        transform: translateX(100%);
+      }
+    }
+
+    .pork-tuah-background .line1 {
+      animation: slideLeft 10s linear infinite;
+    }
+
+    .pork-tuah-background .line2 {
+      animation: slideRight 10s linear infinite;
+    }
+
+    .pork-tuah-background .line3 {
+      animation: slideLeft 10s linear infinite;
+    }
+
+    .pork-tuah-background .line4 {
+      animation: slideRight 10s linear infinite;
+    }
+
+    .pork-tuah-background .line5 {
+      animation: slideLeft 10s linear infinite;
     }
 
     /* Styling for the rotating logo */
@@ -141,6 +156,15 @@
 <body>
   <!-- Rotating Pork Tuah Logo -->
   <img src="pork-tuah-logo.png" alt="Pork Tuah Logo" class="iphone">
+
+  <!-- Sliding "Pork Tuah" Background -->
+  <div class="pork-tuah-background">
+    <span class="line1">Pork Tuah</span>
+    <span class="line2">Pork Tuah</span>
+    <span class="line3">Pork Tuah</span>
+    <span class="line4">Pork Tuah</span>
+    <span class="line5">Pork Tuah</span>
+  </div>
 
   <!-- Links Section -->
   <div class="links">

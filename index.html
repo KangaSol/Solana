@@ -30,8 +30,6 @@
       z-index: -2;
       pointer-events: none;
       overflow: hidden;
-      display: flex;
-      flex-direction: column;
     }
 
     /* Create alternate sliding effect for "Pork Tuah" */
@@ -67,6 +65,8 @@
       animation-duration: 10s;
       animation-timing-function: linear;
       animation-iteration-count: infinite;
+      white-space: nowrap;
+      margin-top: 5px;
     }
 
     .pork-tuah-background .line1 {
@@ -85,7 +85,6 @@
       animation: slideRight 10s linear infinite;
     }
 
-    /* Repeat for more lines if necessary */
     .pork-tuah-background .line5 {
       animation: slideLeft 10s linear infinite;
     }
@@ -189,16 +188,22 @@
   <!-- Sliding "Pork Tuah" Background -->
   <div class="pork-tuah-background">
     <!-- Adding more rows of "Pork Tuah" to make the background cover the entire page -->
-    <span class="line line1">Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah</span>
-    <span class="line line2">Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah</span>
-    <span class="line line3">Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah</span>
-    <span class="line line4">Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah</span>
-    <span class="line line5">Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah</span>
-    <span class="line line6">Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah</span>
-    <span class="line line7">Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah</span>
-    <span class="line line8">Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah</span>
-    <span class="line line9">Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah</span>
-    <span class="line line10">Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah</span>
+    <span class="line line1">Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah</span>
+    <span class="line line2">Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah</span>
+    <span class="line line3">Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah</span>
+    <span class="line line4">Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah</span>
+    <span class="line line5">Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah</span>
+    <span class="line line6">Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah</span>
+    <span class="line line7">Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah</span>
+    <span class="line line8">Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah</span>
+    <span class="line line9">Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah</span>
+    <span class="line line10">Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah</span>
+    <span class="line line11">Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah</span>
+    <span class="line line12">Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah</span>
+    <span class="line line13">Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah</span>
+    <span class="line line14">Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah</span>
+    <span class="line line15">Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah</span>
+    <span class="line line16">Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah Pork Tuah</span>
   </div>
 
   <!-- Links Section -->

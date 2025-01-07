@@ -62,7 +62,7 @@
     /* Styling for the rotating logo */
     .iphone {
       width: 200px;
-      animation: ring 3s infinite ease-in-out;
+      animation: ring 2s infinite ease-in-out;
     }
 
     @keyframes ring {
@@ -70,19 +70,22 @@
         transform: rotate(0deg);
       }
       10% {
-        transform: rotate(-15deg);
+        transform: rotate(-8deg);  /* Less rotation */
       }
       20% {
-        transform: rotate(15deg);
+        transform: rotate(8deg);   /* Less rotation */
       }
       30% {
-        transform: rotate(-15deg);
+        transform: rotate(-8deg);  /* Less rotation */
       }
       40% {
-        transform: rotate(15deg);
+        transform: rotate(8deg);   /* Less rotation */
       }
-      50%, 100% {
+      50% {
         transform: rotate(0deg);
+      }
+      70% {
+        /* Pause for 1 second */
       }
     }
 
@@ -146,5 +149,6 @@
   </div>
 </body>
 </html>
+
 
 

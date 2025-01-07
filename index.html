@@ -30,6 +30,10 @@
       z-index: -2;
       pointer-events: none;
       overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      white-space: nowrap;
     }
 
     /* Create alternate sliding effect for "Pork Tuah" */
@@ -65,10 +69,10 @@
       animation-duration: 10s;
       animation-timing-function: linear;
       animation-iteration-count: infinite;
-      white-space: nowrap;
       margin-top: 5px;
     }
 
+    /* Alternating slide effects for each line */
     .pork-tuah-background .line1 {
       animation: slideLeft 10s linear infinite;
     }
@@ -106,6 +110,30 @@
     }
 
     .pork-tuah-background .line10 {
+      animation: slideRight 10s linear infinite;
+    }
+
+    .pork-tuah-background .line11 {
+      animation: slideLeft 10s linear infinite;
+    }
+
+    .pork-tuah-background .line12 {
+      animation: slideRight 10s linear infinite;
+    }
+
+    .pork-tuah-background .line13 {
+      animation: slideLeft 10s linear infinite;
+    }
+
+    .pork-tuah-background .line14 {
+      animation: slideRight 10s linear infinite;
+    }
+
+    .pork-tuah-background .line15 {
+      animation: slideLeft 10s linear infinite;
+    }
+
+    .pork-tuah-background .line16 {
       animation: slideRight 10s linear infinite;
     }
 

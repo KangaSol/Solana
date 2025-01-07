@@ -17,7 +17,7 @@
       min-height: 100vh;
       overflow: hidden;
       position: relative;
-      background-color: #ccc; /* Light grey base color */
+      background-color: #f1c6c6; /* Dull pink background */
     }
 
     /* Sliding Background "Pork Tuah" Text */
@@ -27,16 +27,17 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: transparent;
       z-index: -2;
       pointer-events: none;
       overflow: hidden;
+      display: flex;
+      flex-direction: column;
     }
 
     .pork-tuah-background span {
       display: block;
       white-space: nowrap;
-      font-size: 120px;
+      font-size: 50px; /* Smaller text */
       font-weight: bold;
       color: white;
       letter-spacing: 10px;
@@ -64,30 +65,14 @@
       }
     }
 
-    .pork-tuah-background .line1 {
-      animation: slideLeft 10s linear infinite;
-    }
-
-    .pork-tuah-background .line2 {
-      animation: slideRight 10s linear infinite;
-    }
-
-    .pork-tuah-background .line3 {
-      animation: slideLeft 10s linear infinite;
-    }
-
-    .pork-tuah-background .line4 {
-      animation: slideRight 10s linear infinite;
-    }
-
-    .pork-tuah-background .line5 {
+    .pork-tuah-background span {
       animation: slideLeft 10s linear infinite;
     }
 
     /* Styling for the rotating logo */
     .iphone {
-      width: 300px;  /* Increased size of the logo */
-      animation: ring 1.5s infinite ease-in-out;  /* Reduced duration for quicker rotation */
+      width: 300px;
+      animation: ring 1.5s infinite ease-in-out; /* Reduced duration for quicker rotation */
     }
 
     @keyframes ring {
@@ -95,16 +80,16 @@
         transform: rotate(0deg);
       }
       10% {
-        transform: rotate(-8deg);  /* Less rotation */
+        transform: rotate(-8deg);
       }
       20% {
-        transform: rotate(8deg);   /* Less rotation */
+        transform: rotate(8deg);
       }
       30% {
-        transform: rotate(-8deg);  /* Less rotation */
+        transform: rotate(-8deg);
       }
       40% {
-        transform: rotate(8deg);   /* Less rotation */
+        transform: rotate(8deg);
       }
       50% {
         transform: rotate(0deg);
@@ -116,7 +101,7 @@
 
     /* Links Section */
     .links {
-      margin-top: 40px; /* Adjusted to shift the links down */
+      margin-top: 40px;
       text-align: center;
     }
 
@@ -159,11 +144,17 @@
 
   <!-- Sliding "Pork Tuah" Background -->
   <div class="pork-tuah-background">
-    <span class="line1">Pork Tuah</span>
-    <span class="line2">Pork Tuah</span>
-    <span class="line3">Pork Tuah</span>
-    <span class="line4">Pork Tuah</span>
-    <span class="line5">Pork Tuah</span>
+    <!-- Adding more rows of "Pork Tuah" to make the background cover the entire page -->
+    <span>Pork Tuah</span>
+    <span>Pork Tuah</span>
+    <span>Pork Tuah</span>
+    <span>Pork Tuah</span>
+    <span>Pork Tuah</span>
+    <span>Pork Tuah</span>
+    <span>Pork Tuah</span>
+    <span>Pork Tuah</span>
+    <span>Pork Tuah</span>
+    <span>Pork Tuah</span>
   </div>
 
   <!-- Links Section -->
@@ -200,5 +191,4 @@
   </script>
 </body>
 </html>
-
 
